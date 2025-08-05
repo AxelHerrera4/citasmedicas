@@ -1,0 +1,380 @@
+/* Variables para tema médico profesional */
+:root {
+  --primary-blue: #2563eb;
+  --primary-blue-dark: #1d4ed8;
+  --secondary-teal: #0891b2;
+  --success-green: #059669;
+  --warning-amber: #d97706;
+  --danger-red: #dc2626;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-500: #6b7280;
+  --gray-700: #374151;
+  --gray-900: #111827;
+  --white: #ffffff;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --border-radius-lg: 12px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.calendario-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
+}
+
+.calendario-box {
+  background: var(--white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.calendario-titulo {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--white);
+  text-align: center;
+  margin: 0;
+  padding: 32px 24px;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-teal) 100%);
+  letter-spacing: -0.025em;
+}
+
+.mensaje-permisos {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ffeaa7;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.mensaje-permisos h4 {
+  margin: 0 0 10px 0;
+}
+
+.mensaje-permisos p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.agregar-horario-box {
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border: 1px solid #e9ecef;
+}
+
+.agregar-horario-box h3 {
+  margin-bottom: 20px;
+  color: #495057;
+  font-size: 20px;
+}
+
+.horario-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.horario-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #495057;
+}
+
+.horario-form select,
+.horario-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.botones-acciones {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-verde {
+  padding: 12px 24px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-rojo {
+  padding: 12px 24px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.error-mensaje {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.grid-dias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.bloque-horario {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 200px;
+}
+
+.bloque-horario h3 {
+  text-align: center;
+  color: #495057;
+  margin-bottom: 20px;
+  font-size: 18px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.sin-horarios {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+  margin-top: 40px;
+}
+
+.card-horario {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+  position: relative;
+}
+
+.btn-eliminar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-horario p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.details-citas {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.cita-item {
+  padding: 5px 10px;
+  margin: 3px 0;
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-agendar {
+  font-size: 10px;
+  padding: 2px 8px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.resumen-semanal {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #e3f2fd;
+  border-radius: 8px;
+  border: 1px solid #bbdefb;
+}
+
+.resumen-semanal h3 {
+  color: #1976d2;
+  margin-bottom: 15px;
+}
+
+.resumen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  text-align: center;
+}
+
+.resumen-grid strong {
+  font-size: 24px;
+  color: #1976d2;
+}
+
+.resumen-grid p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.cita-item.ocupado span {
+  color: red;
+  font-weight: bold;
+}
+
+.cita-item.ocupado button {
+  background-color: #cc0000;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Estilos mejorados para citas ocupadas y disponibles */
+.cita-item.ocupado {
+  background-color: #ffe6e6;
+  border: 1px solid #ff9999;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+.cita-item.disponible {
+  background-color: #e6ffe6;
+  border: 1px solid #99ff99;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+.btn-ocupado {
+  background-color: #dc3545 !important;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.btn-ocupado:hover {
+  background-color: #dc3545 !important;
+}
+
+.estado-ocupado {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Estilos para la información del paciente (solo para doctores) */
+.info-cita-ocupada {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info-paciente {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.datos-paciente {
+  background-color: #f8f9fa;
+  padding: 8px;
+  border-radius: 4px;
+  border-left: 3px solid #007bff;
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.datos-paciente p {
+  margin: 2px 0;
+  color: #495057;
+}
+
+.datos-paciente strong {
+  color: #007bff;
+  font-weight: 600;
+}
+
+.horario-cita {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Estilos para citas reprogramadas */
+.cita-item.reprogramada {
+  background-color: #e3f2fd;
+  border: 2px solid #2196f3;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 5px 0;
+  box-shadow: 0 2px 4px rgba(33, 150, 243, 0.2);
+}
+
+/* Estilos para diferentes estados de cita */
+.estado-cita {
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.estado-cita.ocupado {
+  color: #dc3545;
+  background-color: #f8d7da;
+}
+
+.estado-cita.reprogramada {
+  color: #2196f3;
+  background-color: #e3f2fd;
+}
